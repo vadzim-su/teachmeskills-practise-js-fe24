@@ -2,3 +2,10 @@
 function *arrayIterator(arr) {
   // Solution here...
 }
+
+const someArray = [1, 2, 3];
+let g = arrayIterator(someArray);
+
+for (item of g) {
+  //...
+}

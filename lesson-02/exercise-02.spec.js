@@ -2,14 +2,14 @@ describe('`Promise` API overview', function() {
   describe('resolving a promise', () => {
     // reminder: the test passes when a fulfilled promise is returned
     it('via constructor parameter `new Promise((resolve) => { resolve(); })`', () => {
-      const param = () => { resolve(); };
+      const param = (resolve, reject) => { resolve(); };
       return new Promise(param);
     });
 
 
 
     it('using `Promise.resolve()`', () => {
-      return Promise.reject('all fine');
+      return Promise.resolve('all fine');
     });
   });
 
@@ -17,7 +17,7 @@ describe('`Promise` API overview', function() {
 
   describe('a rejected promise', () => {
     it('using the constructor parameter', (done) => {
-      const promise = new Promise((reject) => { reject(); });
+      const promise = new Promise((resolve, reject) => { reject(); });
       promise
         .then(() => done(new Error('The promise is expected to be rejected.')))
         .catch(() => done());
@@ -26,7 +26,7 @@ describe('`Promise` API overview', function() {
 
 
     it('via `Promise.reject()`', (done) => {
-      const promise = Promise.resolve();
+      const promise = Promise.reject();
       promise
         .then(() => done(new Error('The promise is expected to be rejected.')))
         .catch(() => done());
