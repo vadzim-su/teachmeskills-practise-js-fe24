@@ -1,1 +1,6 @@
-// Exercise 08: Implement rates calculator. There are 2 selects - with source rate and destination rate, input for sum.Rates should be in the array. It should not be a possibility to choose the same currencies.
+// Exercise 03:
+//Create an object called shape that has the type property and a getType() method.
+
+//Define a Triangle() constructor function whose prototype is shape. Objects created with Triangle() should have three own properties—a, b, and c, representing the lengths of the sides of a triangle.
+
+//Add a new method to the prototype called getPerimeter()
