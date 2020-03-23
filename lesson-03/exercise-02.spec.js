@@ -14,4 +14,11 @@ describe('Exercise 02', () => {
   it('Should return the most frequent array item', () => {
     chai.expect(mostFrequent([1, 2, 1, 2, 3])).to.eql(1);
   });
+
+  it('Should return the most frequent array item', () => {
+    let member1 = {name: 'Vasya'};
+    let member2 = {name: 'Petya'};
+    let member3 = {name: 'Kolya'};
+    chai.expect(mostFrequent([member1, member1, member2, member3])).to.eql(member1);
+  });
 });
