@@ -14,3 +14,26 @@ for(let item of set){
 return result
 
 };
+
+
+
+
+
+function addItem(node, index, val){
+  let current = node
+  let prev = node
+  let currentIndex = 0
+
+  while(current.next !== null){
+    prev = current
+    current = current.next
+      if (currentIndex === index){
+        prev.next = {
+          val,
+          next: current
+        }
+      }
+
+      currentIndex++
+  }
+}
